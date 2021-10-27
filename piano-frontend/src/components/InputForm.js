@@ -10,6 +10,7 @@ export default class InputForm extends Component {
             name: name,
             notes: notes
         }
+        this.props.resetPianoKey()
     }
     handleChange = event => {
         this.setState({
