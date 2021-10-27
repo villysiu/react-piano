@@ -27,9 +27,10 @@ class PianoKey extends Component {
   }
 
   hanleMouseUp = () => {
-    this.setState(() => {
-      return { color: this.props.color }
-  })}
+    this.setState({ 
+      color: this.props.color 
+    })
+  }
 
   render() {
     

@@ -17,12 +17,10 @@ export default class InputForm extends Component {
             [event.target.name]: event.target.value
         })
     }
-componentDidUpdate = () => {
-     
+
+    componentDidUpdate = () => {
         console.log(this.props)
     if (this.props.pianoKey !== '') {
-        
-        console.log("key pressed")
         this.setState({
             notes: this.state.notes.concat(`${this.props.pianoKey} `) 
         })
@@ -37,7 +35,7 @@ componentDidUpdate = () => {
     handleSubmit = event => {
         event.preventDefault();
         console.log(this.state)
-       
+    
         this.props.callback(this.state)
 
         let {id, name, notes} = this.props.defaultValue
@@ -50,7 +48,6 @@ componentDidUpdate = () => {
  
     render() { 
         console.log(this.props)
-      console.log(this.state.notes)
         return ( 
      
             <div>

@@ -31,7 +31,6 @@ const mapDispatchToProps = dispatch => {
     }
   }
   const mapStateToProps = state => {
-      console.log(state.pianoReducer.pianoKey)
       return {
           errors: state.musicsReducer.errors,
           pianoKey: state.pianoReducer.pianoKey,

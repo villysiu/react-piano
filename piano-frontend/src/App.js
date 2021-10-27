@@ -11,11 +11,7 @@ import MusicSheet from "./components/MusicSheet.js"
 import MusicRoute from "./components/MusicRoute.js"
 import ScrollToTop from "./components/ScrollToTop.js"
 
-
-// export default class App extends Component {   
-  
-//   render() {
-  const App = () => {
+const App = () => {
     return (
       
       <div id="app">
@@ -38,7 +34,6 @@ import ScrollToTop from "./components/ScrollToTop.js"
           <Route exact path='/musics/:id/edit' render={(routerProps) => <MusicEdit {...routerProps} />} />
 
           <Route path="*" render={(routerProps) => <NoMatch  {...routerProps} />} />
-          <Route path="/musics/*" render={(routerProps) => <NoMatch  {...routerProps} />} />
 
         </Switch>
         
@@ -48,6 +43,5 @@ import ScrollToTop from "./components/ScrollToTop.js"
       </div>
 
     )
-
 }
 export default App

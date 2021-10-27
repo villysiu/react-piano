@@ -44,7 +44,6 @@ class MusicEdit extends Component {
     }
 }
 const mapStateToProps = state => {
-  console.log(state)
   return {
     music: state.musicsReducer.music,
     loading: state.musicsReducer.loading,
