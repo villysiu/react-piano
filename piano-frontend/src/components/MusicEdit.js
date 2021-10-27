@@ -36,7 +36,7 @@ class MusicEdit extends Component {
             return (
               <div>
                   <Error errors={this.props.errors} />
-                  <InputForm defaultValue={music} callback={this.editMusicCb} />
+                  <InputForm defaultValue={music} callback={this.editMusicCb} pianoKey={this.props.pianoKey} resetPianoKey={this.props.resetPianoKey} />
                   {/* <InputForm music={this.props.music ? this.props.music : this.state.music} cbMusic={this.cbMusic} /> */}
               </div>
             )
@@ -49,12 +49,14 @@ const mapStateToProps = state => {
     music: state.musicsReducer.music,
     loading: state.musicsReducer.loading,
     errors: state.musicsReducer.errors,
+    pianoKey: state.pianoReducer.pianoKey,
   }
 }
 const mapDispatchToProps = dispatch => {
   return{
      fetchMusic: (id) => dispatch(fetchMusic(id)),
-     editMusic: (music, history, l) => dispatch(editMusic(music, history))
+     editMusic: (music, history, l) => dispatch(editMusic(music, history)),
+     resetPianoKey: () => dispatch({type: 'RESET_PIANO_KEY'}),
   
   }
 }
