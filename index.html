@@ -1,1 +1,24 @@
-test
+This is a Single Page Application (SPA). The frontend is built with react-redux. The frontend will communicate with a backend API built with Ruby and Rails.
+This project allows user to create, edit and delete simple music sheets, and store the music sheets in the backend api.
+
+It used redux-thunk middleware to communicate with the backend api and change state.
+
+The communication with api is in musicAction. If there is any error, it will be catched by <code>Promise.reject(response)</code>, the error message willbe sent to reducer and displayed accordingly.
+
+This project has two reducers, musicReducer and pianoReducer, to return new state values.
+musicReducer - change state after result returned from backend. 
+piano - change state after piano key is pressed.
+
+This piano project only supports these notes: C3, D3, E3, F3, G3, A3, B3, C4, and 4 lines max. Space between each note and comma for new line.
+It must be in this format: 
+<code>
+  C3 C3 G3 G3 A3 A3 G3, F3 F3 E3 E3 D3 D3 C3, G3 G3 F3 F3 E3 E3 D3, G3 G3 F3 F3 E3 E3 D3, C3 C3 G3 G3 A3 A3 G3, F3 F3 E3 E3 D3 D3 C3
+</code>
+If user enter a note not supoorted or in different format,error will occured. 
+
+To create and edit music:
+User can enter the keyboard by typing the supported notes, with space between and comma for next line. 
+or user can click the keyboard.
+
+
+
