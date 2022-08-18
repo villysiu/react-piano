@@ -6,6 +6,7 @@ Open a terminal, browse to a convenient location for your project, and type
 Change to the folder containing the project. 
 in the terminal, type <code>cd piano-api</code>. 
 Run <code> bundle install</code>.
+then <code> rails db:migrate</code>. and <code> rails db:seed</code>.n
 Type <code>rails server</code> to start the server.
 
 Open a new terminal. 
